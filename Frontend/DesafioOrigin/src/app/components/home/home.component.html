@@ -1,0 +1,9 @@
+<div class="home-container">
+    <h2>Ingrese el número de tarjeta</h2>
+    <input type="text" [(ngModel)]="maskedCardNumber" placeholder="Ingrese el número de la tarjeta" disabled />
+    <div class="digit-buttons">
+      <button *ngFor="let digit of digitButtons" (click)="digitButtonClicked(digit)">{{ digit }}</button>
+    </div>
+    <button (click)="acceptButtonClicked()">Aceptar</button>
+    <button (click)="clearButtonClicked()">Limpiar</button>
+  </div>
